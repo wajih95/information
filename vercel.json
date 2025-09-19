@@ -5,36 +5,31 @@
       "maxDuration": 10
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/dist/bundle.js"
+      "src": "/views/(.*)",
+      "dest": "/views/$1"
+    },
+    {
+      "src": "/public/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/bundle.js"
     }
   ],
   "builds": [
     {
-      "src": "server.js",
+      "src": "package.json",
       "use": "@vercel/node",
       "config": {
         "includeFiles": [
-          "dist/**"
+          "dist/**",
+          "views/**",
+          "public/**"
         ]
-      },
-      "routes":[{
-        "dest": "server.js"
       }
-      ]
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Vercel-Forwarded-For",
-          "value": ":ip"
-        }
-      ]
     }
   ]
 }
