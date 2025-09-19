@@ -4,9 +4,9 @@
 	"description": "fcc backend boilerplate",
 	"main": "server.js",
 	"scripts": {
-		"start": "node myApp.js",
-		"build": "npx webpack --config webpack.config.js"
-	},
+   		 "start": "node dist/bundle.js",
+   		 "build": "npx webpack --config webpack.config.js"
+    },
 	"dependencies": {
 		"express": "^4.14.0",
 		"helmet": "3.21.3"
