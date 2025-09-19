@@ -13,13 +13,17 @@
   ],
   "builds": [
     {
-      "src": "package.json",
+      "src": "server.js",
       "use": "@vercel/node",
       "config": {
         "includeFiles": [
           "dist/**"
         ]
+      },
+      "routes":[{
+        "dest": "server.js"
       }
+      ]
     }
   ],
   "headers": [

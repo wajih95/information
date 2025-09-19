@@ -5,7 +5,8 @@
 	"main": "server.js",
 	"scripts": {
    		 "start": "node dist/bundle.js",
-   		 "build": "npx webpack --config webpack.config.js"
+   		 "build": "npx webpack --config webpack.config.js",
+		 "vercel-start": "node server.js"
     },
 	"dependencies": {
 		"express": "^4.14.0",
