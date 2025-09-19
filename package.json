@@ -5,7 +5,7 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node myApp.js",
-		"build": "webpack --config webpack.config.js"
+		"build": "npx webpack --config webpack.config.js"
 	},
 	"dependencies": {
 		"express": "^4.14.0",
